@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" class="num1">
+    <br><br>
+    <input type="number"class="num2">
+    <br><br>
+    <button type="button" class="add">+</button>
+    <button type="button" class="sub">-</button>
+    <button type="button" class="mult">*</button>
+    <button type="button" class="divide">/</button>
+    <button type="button" class="mod">%</button>
+    <button type="button" class="clean">clean</button>
+    <br><br>
+    結果: <div class="result"></div>
+
+    <script>
+        let num1 = document.querySelector('.num1');
+        let num2 = document.querySelector('.num2');
+        let add = document.querySelector(".add");
+        let sub = document.querySelector(".sub");
+        let mult = document.querySelector(".mult");
+        let divide = document.querySelector(".divide");
+        let mod = document.querySelector(".mod");
+        let result = document.querySelector(".result");
+        let clean = document.querySelector('.clean')
+
+
+        clean.addEventListener('click', function () {
+            num1.value = '';
+            num2.value = '';
+            result.textContent = '';
+        })
+
+        add.addEventListener('click', function () {
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+            let total = Number(num1Value) + Number(num2Value);
+            console.log(total);
+            if (num1Value && num2Value) {
+                let total = Number(num1Value) + Number(num2Value);
+                result.textContent = total;
+            } else {
+                alert('兩邊都要輸入數值啦！')
+            }
+        })
+
+        sub.addEventListener('click', function () {
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+            let total = Number(num1Value) - Number(num2Value);
+            console.log(total);
+            if (num1Value && num2Value) {
+                let total = Number(num1Value) - Number(num2Value);
+                result.textContent = total;
+            } else {
+                alert('兩邊都要輸入數值啦！')
+            }
+        })
+
+        mult.addEventListener('click', function () {
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+            let total = Number(num1Value) * Number(num2Value);
+            console.log(total);
+            if (num1Value && num2Value) {
+                let total = Number(num1Value) * Number(num2Value);
+                result.textContent = total;
+            } else {
+                alert('兩邊都要輸入數值啦！')
+            }
+        })
+        divide.addEventListener('click', function () {
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+            let total = Number(num1Value) / Number(num2Value);
+            console.log(total);
+            if (num1Value && num2Value) {
+                let total = Number(num1Value) / Number(num2Value);
+                result.textContent = total;
+            } else {
+                alert('兩邊都要輸入數值啦！')
+            }
+        })
+        mod.addEventListener('click', function () {
+            let num1Value = num1.value;
+            let num2Value = num2.value;
+            let total = Number(num1Value) % Number(num2Value);
+            console.log(total);
+            if (num1Value && num2Value) {
+                let total = Number(num1Value) % Number(num2Value);
+                result.textContent = total;
+            } else {
+                alert('兩邊都要輸入數值啦！')
+            }
+        })
+    </script>
+</body>
+
+</html>
